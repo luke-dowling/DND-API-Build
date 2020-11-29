@@ -1,7 +1,3 @@
-# Basic-Game
+# DND-API-Build
 
- To run the app :
- 
-cd game-app
-
-npm start
+Playing around with  the API at https://www.dnd5eapi.co/

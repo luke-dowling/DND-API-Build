@@ -19,20 +19,3 @@ body {
 h1 {
   margin: 2rem;
 }
-
-.userName {
-  padding: 1rem;
-  color: blue;
-  font-size: 2rem;
-}
-
-.userInput {
-  line-height: 2rem;
-}
-
-.userSubmit {
-  color: #fefefe;
-  background-color: blue;
-  line-height: 2rem;
-  margin: 0 0.5rem;
-}

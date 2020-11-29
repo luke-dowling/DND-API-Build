@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import AddUser from "./Components/AddUser";
+import Spells from "./Components/Spells";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to the basic game!</h1>
-        <AddUser />
+        <h1>Display DND data</h1>
+        <Spells />
       </div>
     );
   }

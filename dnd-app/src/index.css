@@ -1,0 +1,38 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+h1 {
+  margin: 2rem;
+}
+
+.userName {
+  padding: 1rem;
+  color: blue;
+  font-size: 2rem;
+}
+
+.userInput {
+  line-height: 2rem;
+}
+
+.userSubmit {
+  color: #fefefe;
+  background-color: blue;
+  line-height: 2rem;
+  margin: 0 0.5rem;
+}

@@ -1,0 +1,32 @@
+/* HEADER */
+
+header {
+  height: 10rem;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 2px rgb(165, 148, 148);
+}
+
+/* END HEADER */
+
+/* FOOTER */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: #020202;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-style: italic;
+  color: aqua;
+}
+
+/* END FOOTER */

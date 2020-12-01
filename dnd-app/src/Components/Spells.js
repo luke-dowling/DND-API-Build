@@ -4,11 +4,6 @@ import styles from "./spell.module.css";
 
 function Spells() {
   const [spells, setSpell] = useState();
-  useEffect(async () => {
-    const result = await axios("https://www.dnd5eapi.co/api/spells/");
-    console.log(result.data);
-    setSpell(result.data.results.map((item) => <h3>{item.name}</h3>));
-  });
 
   return (
     <div>

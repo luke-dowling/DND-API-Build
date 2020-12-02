@@ -1,19 +1,21 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import styles from "./raceData.module.css";
 
-const RaceData = ({ race, id }) => {
-  let data;
+const RaceData = ({ race }) => {
+  const [raceData, setRaceData] = useState({});
   useEffect(async () => {
-    const result = await axios(`https://www.dnd5eapi.co/api/races/${race}`);
-    let input = result.data;
-    //console.log(input);
-    data = { input };
-  }, {});
-  console.log(data);
+    const response = await fetch(`https://www.dnd5eapi.co/api/races/${race}`);
+    const data = await response.json();
+    console.log(`${race} data ==>`, data);
+    setRaceData(data);
+  }, []);
   return (
     <div className={styles.container}>
-      {/*<p className={styles.item}>{race}</p>*/}
+      <p className={styles.item}>Name: {raceData.name}</p>
+      <p className={styles.item}>Age: {raceData.age}</p>
+      <p className={styles.item}>Alignment: {raceData.alignment}</p>
+      <p className={styles.item}>Size: {raceData.size_description}</p>
+      <p className={styles.item}>Speed: {raceData.speed}</p>
     </div>
   );
 };

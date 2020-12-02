@@ -18,7 +18,7 @@ const MakeChar = () => {
     const response = await fetch("https://www.dnd5eapi.co/api/races");
     const data = await response.json();
     const [...items] = data.results;
-    console.log("races ==>", items);
+    //console.log("races ==>", items);
     setChoices(
       items.map((item) => (
         <option id={item.id} value={item.name} key={item.id}>

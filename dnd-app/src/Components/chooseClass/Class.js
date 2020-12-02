@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ClassData from "./ClassData";
 import axios from "axios";
 
 const Class = () => {
@@ -38,7 +39,7 @@ const Class = () => {
 
       <h1>Your class is: {classes}</h1>
 
-      {/*{race && <RaceData race={class.toLowerCase()} id={id} />}*/}
+      {classes && <ClassData classes={classes.toLowerCase()} id={id} />}
 
       {/*{race && <Class />}*/}
     </div>

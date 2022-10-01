@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import ClassData from "./ClassData";
-import axios from "axios";
+import Form from "react-bootstrap/Form";
 
 const Class = () => {
   const [classes, setClasses] = useState(null);
-  const [id, setId] = useState(null);
   const [choices, setChoices] = useState([]);
 
   const handleChange = (e) => {
-    setClasses(e.target.value);
-    setId(e.target.id);
+    if (e.target.value === `Choose A Class`) {
+      setClasses(null);
+    } else {
+      setClasses(e.target.value);
+    }
     e.preventDefault();
   };
 
@@ -17,7 +19,7 @@ const Class = () => {
     const response = await fetch("https://www.dnd5eapi.co/api/classes");
     const data = await response.json();
     const [...items] = data.results;
-    console.log("races ==>", items);
+
     setChoices(
       items.map((item) => (
         <option id={item.id} value={item.name} key={item.id}>
@@ -29,19 +31,22 @@ const Class = () => {
 
   return (
     <div>
-      <h3>
-        Pick a class :
-        <select onChange={(e) => handleChange(e)}>
-          <option>-------------------</option>
-          {choices}
-        </select>
-      </h3>
+      <Form>
+        <Form.Group controlId="exampleForm.SelectCustomSizeSm">
+          <Form.Label>Pick A Class</Form.Label>
+          <Form.Control
+            as="select"
+            size="sm"
+            custom
+            onChange={(e) => handleChange(e)}
+          >
+            <option>Choose A Class</option>
+            {choices}
+          </Form.Control>
+        </Form.Group>
+      </Form>
 
-      <h1>Your class is: {classes}</h1>
-
-      {classes && <ClassData classes={classes.toLowerCase()} id={id} />}
-
-      {/*{race && <Class />}*/}
+      {classes && <ClassData classes={classes.toLowerCase()} id={classes.id} />}
     </div>
   );
 };

@@ -1,0 +1,20 @@
+.container {
+  margin-bottom: 90px;
+}
+/* FOOTER */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 3rem;
+  padding: 0.6rem 1rem;
+  background-color: #020202;
+  font-size: 1rem;
+  font-style: italic;
+  color: aqua;
+  text-align: right;
+}
+
+/* END FOOTER */
